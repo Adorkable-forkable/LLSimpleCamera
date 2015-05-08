@@ -596,6 +596,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
                 break;
         }
     }
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 80000
     else {
         switch (self.interfaceOrientation) {
             case UIInterfaceOrientationLandscapeLeft:
@@ -612,6 +613,7 @@ NSString *const LLSimpleCameraErrorDomain = @"LLSimpleCameraErrorDomain";
                 break;
         }
     }
+#endif
     
     return videoOrientation;
 }
